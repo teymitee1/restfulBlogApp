@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+        <img class="ui small centered image" src="<%= blogPost.image %>" alt=" post image">
+    <p class="ui large centered header"> <%= blogPost.created.toDateString() %> Accumulator Tips</p>
+<span><%- blogPost.text %></span>
+<a class="ui primary basic tiny button" href="/posts/<%= blogPost._id %>/edit">Edit Post</a>
+<form   action="/posts/<%- blogPost._id %>?_method=DELETE" method="POST">
+    <button class="ui negative basic tiny button">Delete Post</button>
+</form>
+</div>
+
+
+
+<!-- <table class="ui inverted table">
+    <tr>
+        <th>Time</th>
+        <th>Country</th>
+        <th>Match</th>
+        <th>Tip</th>
+        <th>odd</th>
+    </tr>
+</table> -->
+
+<% include partials/footer %>

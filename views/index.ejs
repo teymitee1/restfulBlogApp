@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="container">
+<div class="row">
+    <% blogpost.forEach((post)=>{ %>
+    <div class="col-sm-6 col-md-3">
+      <div class="ui segment">
+        <div class="img-thumbnail text-center">
+          <p>Accumulator Tips for <%= post.created.toDateString() %></p>
+        
+          <img class="img-fluid" src="<%= post.image %>" alt="post image">
+          <div>
+              <a class="btn btn-dark" href="/posts/<%= post._id %>">View Tips
+                <i class="ui right chevron icon"></i>
+              </a>
+          </div>
+      </div>
+    </div>
+  </div>
+    <% }); %>
+  </div>
+</div>
+
+
+
+<% include partials/footer %>
